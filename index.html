@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haflatul Imtihan - Folder Musik</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg bg-light neo-border mb-4">
+        <div class="container">
+            <!-- Logo + Tombol Kembali -->
+            <div class="d-flex align-items-center gap-2">
+                <button id="btnBack" class="btn btn-neo-outline btn-neo-sm" onclick="goHome()" style="display:none;">
+                    <i class="bi bi-arrow-left"></i> Kembali
+                </button>
+                <span class="navbar-brand fw-bold fs-2" style="letter-spacing:-1px; cursor:pointer;" onclick="goHome()">
+                    <i class="bi bi-folder-fill me-2"></i>Haflatul Imtihan
+                </span>
+            </div>
+            
+            <div class="ms-auto d-flex gap-2 align-items-center flex-wrap">
+                <!-- Breadcrumb -->
+                <span id="breadcrumb" class="fw-bold">
+                    <i class="bi bi-house-fill"></i> / <span>Semua Folder</span>
+                </span>
+                
+                <div class="d-flex">
+                    <input id="searchInput" class="neo-input form-control-sm" type="search" placeholder="Cari..." />
+                    <button class="btn btn-neo btn-neo-sm ms-1" id="searchBtn"><i class="bi bi-search"></i></button>
+                </div>
+                
+                <button class="btn btn-neo-outline btn-neo-sm" id="stopAllBtn" title="Hentikan semua musik">
+                    <i class="bi bi-stop-fill"></i>
+                </button>
+                <button class="btn btn-neo-outline btn-neo-sm" id="darkModeToggle"><i class="bi bi-moon-fill"></i></button>
+                <button class="btn btn-neo-outline btn-neo-sm" id="fullscreenToggle"><i class="bi bi-arrows-fullscreen"></i></button>
+                <button class="btn btn-neo-outline btn-neo-sm" id="presenterToggle"><i class="bi bi-display"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container" id="mainContainer">
+        <!-- Progress -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <span class="fw-bold fs-5"><i class="bi bi-list-ol"></i> Progress Penampilan</span>
+                    <span id="progressText" class="fw-bold">0 / 0</span>
+                </div>
+                <div class="progress progress-neo">
+                    <div class="progress-bar" id="progressBar" role="progressbar" style="width:0%;">0%</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAMPILAN FOLDER / FILE -->
+        <div class="row" id="contentGrid"></div>
+    </div>
+
+    <!-- ===== OFF CANVAS LIRIK ===== -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="lyricsOffcanvas">
+        <div class="offcanvas-header" style="border-bottom:4px solid #000;">
+            <h5 class="offcanvas-title fw-bold"><i class="bi bi-file-music"></i> Lirik & Musik</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="lyricsTitle" class="fw-bold fs-4 mb-2"></div>
+            <div id="lyricsJenjang" class="neo-badge mb-3"></div>
+            
+            <div id="offcanvasAudioPlayer" class="audio-player-mini mb-3">
+                <i class="bi bi-music-note-beamed fs-5"></i>
+                <audio id="offcanvasAudio" controls style="width:100%;">
+                    <source src="" type="audio/mpeg">
+                    Browser tidak mendukung audio.
+                </audio>
+            </div>
+            
+            <div id="lyricsContent" class="lyrics-scroll"></div>
+            
+            <div class="mt-3 d-flex gap-2 flex-wrap">
+                <button class="btn btn-neo btn-neo-sm" id="scrollLyricsBtn">
+                    <i class="bi bi-arrow-down-circle"></i> Auto Scroll
+                </button>
+                <button class="btn btn-neo-outline btn-neo-sm" id="stopScrollBtn">
+                    <i class="bi bi-stop-circle"></i> Stop
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== BOOTSTRAP JS ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- ===== CUSTOM JS ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>

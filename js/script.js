@@ -71,6 +71,13 @@ var dataLagu = [
         lirik: 'ZAPIN',
         musik: 'aset/AWAL/TARI ZAPIN.mp3'
     },
+    { 
+        id: 16, 
+        jenjang: 'AWAL MULAI', 
+        judul: 'Pengirng MC',
+        lirik: 'Pengiring MC',
+        musik: 'aset/AWAL/pengiring mc.mp3'
+    },
 
 
     // ===== WISUDA =====
@@ -84,16 +91,9 @@ var dataLagu = [
     { 
         id: 10, 
         jenjang: 'WISUDA', 
-        judul: 'Din Ding Ban Din Ding',
-        lirik: 'Syukur kita pada Tuhan\nYang telah memberi kemenangan\nBerkat rahmat dan karunia\nKita s\'jahtera bersama',
+        judul: 'Din ding ba din ding',
+        lirik: 'Din ding ba din ding',
         musik: 'aset/MI/badinding.mp3'
-    },
-    { 
-        id: 11, 
-        jenjang: 'WISUDA', 
-        judul: 'Sungkeman',
-        lirik: 'Sungkeman',
-        musik: 'aset/WISUDA/Instrumen sungkeman .mp3'
     },
     { 
         id: 12, 
@@ -103,6 +103,13 @@ var dataLagu = [
         musik: 'aset/WISUDA/INSTRUMEN_PENGIRING_WISUDA.mp3'
     },
     { 
+        id: 14, 
+        jenjang: 'WISUDA', 
+        judul: 'Terima_Kasih_Guruku_versi_Ena',
+        lirik: 'Terima_Kasih_Guruku_versi_Ena',
+        musik: 'aset/WISUDA/Terima_Kasih_Guruku_versi_Ena.mp3'
+    },
+    { 
         id: 13, 
         jenjang: 'WISUDA', 
         judul: 'SELAMAT TINGGAL GURU',
@@ -110,12 +117,14 @@ var dataLagu = [
         musik: 'aset/WISUDA/SELAMAT TINGGAL GURU.mp3'
     },
     { 
-        id: 14, 
+        id: 11, 
         jenjang: 'WISUDA', 
-        judul: 'Terima_Kasih_Guruku_versi_Ena',
-        lirik: 'Terima_Kasih_Guruku_versi_Ena',
-        musik: 'aset/WISUDA/Terima_Kasih_Guruku_versi_Ena.mp3'
-    },
+        judul: 'Sungkeman',
+        lirik: 'Sungkeman',
+        musik: 'aset/WISUDA/Instrumen sungkeman .mp3'
+    }, 
+    
+    
 ];
 
 // ============================================================
@@ -126,7 +135,7 @@ var folders = [
     { name: 'RA', icon: 'bi-folder-fill', count: 4 },
     { name: 'MI', icon: 'bi-folder-fill', count: 4 },
     { name: 'AWAL MULAI', icon: 'bi-folder-fill', count: 2 },
-    { name: 'WISUDA', icon: 'bi-folder-fill', count: 2 }
+    { name: 'WISUDA', icon: 'bi-folder-fill', count: 6 }
 ];
 
 // ============================================================
